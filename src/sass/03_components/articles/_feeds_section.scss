@@ -1,0 +1,205 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.articles{
+
+  &_feeds_section{
+    padding: 4rem 6rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include mq.responsive('md')
+    {
+      padding: 4rem;
+    }
+    @include mq.responsive('sm')
+    {
+      padding: 3rem 1.5rem;
+    }
+
+    &_error{
+      display: flex;
+      text-align: center;
+      color: red;
+      height: calc(100vh - 218px);
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      padding-bottom: 64px;
+			pointer-events: none;
+
+      @include mq.responsive('sm')
+      {
+        font-size: 1.6rem;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 1.4rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        font-size: 1.2rem;
+      }
+    }
+
+    &_article{
+      background-image: linear-gradient(to bottom, black , rgb(51, 56, 151));
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      color: white;
+      padding: 2rem 2.5rem;
+      border-radius: 20px;
+
+      @include mq.responsive('sm')
+      {
+        padding: 1.5rem 2rem;
+      }
+      @include mq.responsive('xs')
+      {
+        padding: 1.5rem 2rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        padding: 1.5rem 2rem;
+      }
+
+      &_title{
+        font-size: 2.2rem;
+        color: rgb(87, 98, 253);
+        font-weight: 900;
+        pointer-events: none;
+        text-transform: uppercase;
+
+        @include mq.responsive('sm')
+        {
+          font-size: 1.7rem;
+        }
+        @include mq.responsive('xs')
+        {
+          font-size: 1.4rem;
+        }
+        @include mq.responsive('xxs')
+        {
+          font-size: 1.2rem;
+        }
+      }
+
+      &_description{
+        font-size: 1.2rem;
+        color: rgb(213, 213, 213);
+        pointer-events: none;
+
+        @include mq.responsive('xs')
+        {
+          display: none;
+        }
+      }
+
+			&_link_button{
+				text-decoration: none;
+				color: black;
+
+				button{
+					font-size: 1.2rem;
+					padding: 0.7rem 1.4rem;
+					border: none;
+					border-radius: 30px;
+					text-transform: uppercase;
+					font-weight: 700;
+					cursor: pointer;
+					transition: background-color 0.2s, color 0.2s;
+
+          @include mq.responsive('xl')
+          {
+            font-size: 1.2rem;
+            padding: 0.7rem 1.4rem;
+          }
+          @include mq.responsive('lg')
+          {
+            font-size: 1.1rem;
+            padding: 0.7rem 1.3rem;
+          }
+          @include mq.responsive('md')
+          {
+            font-size: 1.1rem;
+            padding: 0.7rem 1.2rem;
+          }
+          @include mq.responsive('sm')
+          {
+            font-size: 1.4rem;
+            padding: 0.6rem 1.5rem;
+          }
+          @include mq.responsive('xs')
+          {
+            font-size: 1.1rem;
+            padding: 0.7rem 1.3rem;
+          }
+          @include mq.responsive('xxs')
+          {
+            font-size: 1rem;
+            padding: 0.7rem 1.2rem;
+          }
+				}
+				button:hover{
+					background-color: black;
+					color: white;
+				}
+			}
+		}
+
+    &_load_button{
+      font-size: 1.2rem;
+      padding: 1.2rem;
+      font-weight: 700;
+      background-color: black;
+      color: white;
+      border: 0;
+      transition: box-shadow 0.2s, transform 0.2s;
+      border-radius: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      @include mq.responsive('xs')
+      {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+    &_load_button:hover{
+      box-shadow: 1px 1px rgb(87, 98, 253), 2px 2px rgb(87, 98, 253), 3px 3px rgb(87, 98, 253), 4px 4px rgb(87, 98, 253), 5px 5px rgb(87, 98, 253), 6px 6px rgb(87, 98, 253), 7px 7px rgb(87, 98, 253), 8px 8px rgb(87, 98, 253);
+      transform: translateX(-8px) translateY(-8px);
+    }
+  }
+}
+
+// loading animation:
+
+.articles_feeds_section_loading {
+  display: flex;
+  height: calc(100vh - 282px);
+  align-items: center;
+  justify-content: center;
+	pointer-events: none;
+}
+
+@keyframes arrows {
+  0%,
+  100% {
+    color: black;
+    transform: translateY(0);
+  }
+  50% {
+    color: #3AB493;
+    transform: translateY(20px);
+  }
+}
+
+.articles_feeds_section_loading_arrows {
+	font-size: 2rem;
+  --delay: 0s;
+  animation: arrows 1s var(--delay) infinite ease-in;
+}

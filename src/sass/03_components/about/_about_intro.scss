@@ -1,0 +1,187 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.about_intro{
+  display: flex;
+  align-items: center;
+  padding: 2rem 6rem;
+  column-gap: 6rem;
+
+  @include mq.responsive('lg')
+  {
+    padding: 3.5rem;
+  }
+  @include mq.responsive('md')
+  {
+    padding: 3.5rem;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+  @include mq.responsive('sm')
+  {
+    padding: 3.5rem;
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+  @include mq.responsive('xs')
+  {
+    padding: 3.5rem 3rem;
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+  @include mq.responsive('xxs')
+  {
+    padding: 3.5rem 2rem;
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+
+  &_content{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;   
+    pointer-events: none;
+    text-align: center;
+
+    @include mq.responsive('xl')
+    {
+      font-size: 1.7rem;
+    }
+    @include mq.responsive('lg')
+    {
+      font-size: 1.7rem;
+    }
+    @include mq.responsive('sm')
+    {
+      font-size: 2.3rem;
+    }
+    @include mq.responsive('xs')
+    {
+      font-size: 1.9rem;
+    }
+    @include mq.responsive('xxs')
+    {
+      font-size: 1.7rem;
+    }
+
+    &_img{
+      position: relative;
+
+      &_scribble{
+        aspect-ratio: 4/3;
+        width: 80px;
+        position: absolute;
+        bottom: -20px;
+        right: -60px;
+        transform: rotate(180deg);
+  
+        @include mq.responsive('xl')
+        {
+          width: 50px;
+          right: -30px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 50px;
+          right: -30px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 60px;
+          right: -40px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 50px;
+          right: -25px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 50px;
+          right: -30px;
+        }
+      }
+    }
+  }
+
+  &_image_hash{
+    display: flex;
+    align-items: center;
+
+    &_image{
+      aspect-ratio: 368/622;
+      width: 280px;
+      margin-left: -3rem;
+      position: relative;
+      z-index: 100;
+
+      @include mq.responsive('xl')
+      {
+        width: 200px;
+        margin-left: -2rem;
+      }
+      @include mq.responsive('lg')
+      {
+        width: 200px;
+        margin-left: -2rem;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 250px;
+        margin-left: -2rem;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 220px;
+        margin-left: -2rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 200px;
+        margin-left: -2rem;
+      }
+    }
+
+    &_hash{
+      height: 18rem;
+      writing-mode: vertical-rl;
+      font-size: 3rem;
+      font-weight: bold;
+      color: rgb(87, 98, 253);
+      text-transform: uppercase;
+      pointer-events: none;
+      line-height: 1;
+      text-align: center;
+
+      @include mq.responsive('xl')
+      {
+        font-size: 1.7rem;
+        height: 10rem;
+      }
+      @include mq.responsive('lg')
+      {
+        font-size: 1.7rem;
+        height: 10rem;
+      }
+      @include mq.responsive('sm')
+      {
+        font-size: 2.3rem;
+        height: 12rem;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 1.9rem;
+        height: 10rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        font-size: 1.7rem;
+        height: 10rem;
+      }
+
+      span{
+        color: black;
+      }
+    }
+  }
+}

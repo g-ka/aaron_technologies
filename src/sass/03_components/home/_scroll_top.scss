@@ -1,0 +1,24 @@
+.scroll_top_button{
+  border-radius: 50%;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 3vh;
+  right: 1.5vw;
+  border: none;
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &_icon{
+    font-size: 2rem;
+    color: white;
+  }
+}
+.scroll_top_button:hover{
+  animation: pop 0.4s 1;
+}
+@keyframes pop {
+  0% {transform: translateY(0)}
+  50% {transform: translateY(-10px)}
+  100% {transform: translateY(0)}
+}

@@ -1,0 +1,94 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.courses{
+
+  &_intro{
+    padding: 5rem 6rem;
+  
+    @include mq.responsive('xl')
+    {
+      padding: 5rem 3.5rem 4rem 3.5rem;
+    }
+    @include mq.responsive('lg')
+    {
+      padding: 5rem 3.5rem 4rem 3.5rem;
+    }
+    @include mq.responsive('md')
+    {
+      padding: 4rem 3.5rem 3.5rem 3.5rem;
+    }
+    @include mq.responsive('sm')
+    {
+      padding: 4rem 3.5rem 3rem 3.5rem;
+    }
+    @include mq.responsive('xs')
+    {
+      padding: 3rem 3.5rem 2rem 3.5rem;
+    }
+    @include mq.responsive('xxs')
+    {
+      padding: 3rem 2rem 2rem 2rem;
+    }
+  
+    &_text{
+      font-size: 4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1;
+      pointer-events: none;
+      text-align: center;
+  
+      @include mq.responsive('xl')
+      {
+        font-size: 4rem;
+      }
+      @include mq.responsive('lg')
+      {
+        font-size: 3.5rem;
+      }
+      @include mq.responsive('md')
+      {
+        font-size: 3rem;
+      }
+      @include mq.responsive('sm')
+      {
+        font-size: 3rem;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 2.5rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        font-size: 2.1rem;
+      }
+  
+      &_highly{
+        position: relative;
+  
+        &_mark{
+          position: absolute;
+          width: 120px;
+          aspect-ratio: 4/3;
+          top: -30px;
+          left: -60px;
+          transform: rotate(-20deg);
+
+          @include mq.responsive('xxs')
+          {
+            width: 80px;
+            top: -25px;
+            left: -43px;
+          }
+        }
+      }
+  
+      &_crafted_courses{
+        background: linear-gradient(to right, black, rgb(87, 98, 253), black);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      } 
+    }
+  }
+}

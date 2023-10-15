@@ -1,0 +1,95 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.about_end{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  padding: 5rem 6rem;
+  
+  @include mq.responsive('xs')
+  {
+    padding: 3rem;
+  }
+  @include mq.responsive('xxs')
+  {
+    padding: 3rem 1.5rem;
+  }
+
+  p{
+    font-size: 1.2rem;
+    text-align: center;   
+    pointer-events: none;
+
+    span{
+      position: relative;
+
+      img{
+        position: absolute;      
+        width: 60px;
+        aspect-ratio: 368/333;
+        transform: rotate(180deg);
+
+        @include mq.responsive('xs')
+        {
+          width: 50px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  &_content1{
+    img{
+      top: -40px;
+      left: -60px;
+
+      @include mq.responsive('xs')
+      {
+        top: -45px;
+        left: -40px;
+      }
+      @include mq.responsive('xxs')
+      {
+        top: -35px;
+        left: -30px;
+      }
+    }
+  }
+  &_content2{
+    img{
+      top: -40px;
+      left: -60px;
+
+      @include mq.responsive('xs')
+      {
+        top: -45px;
+        left: -40px;
+      }
+      @include mq.responsive('xxs')
+      {
+        top: -35px;
+        left: -30px;
+      }
+    }
+  }
+  &_content3{
+    img{
+      top: -40px;
+      left: -60px;
+
+      @include mq.responsive('xs')
+      {
+        top: -45px;
+        left: -40px;
+      }
+      @include mq.responsive('xxs')
+      {
+        top: -35px;
+        left: -30px;
+      }
+    }
+  }
+}

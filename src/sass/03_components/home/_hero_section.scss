@@ -1,0 +1,295 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.hero_section{
+  display: flex;
+  align-items: center;
+  column-gap: 6rem;
+  padding: 4rem 6rem;
+
+  @include mq.responsive('xl')
+  {
+    padding: 3rem 6rem;
+    column-gap: 6rem;
+  }
+  @include mq.responsive('lg')
+  {
+    padding: 5rem 3.5rem;
+    column-gap: 3.5rem;
+  }
+  @include mq.responsive('md')
+  {
+    flex-direction: column-reverse;
+    row-gap: 5.5rem;
+  }
+  @include mq.responsive('sm')
+  {
+    flex-direction: column-reverse;
+    row-gap: 5.5rem;
+  }
+  @include mq.responsive('xs')
+  {
+    flex-direction: column-reverse;
+    row-gap: 6rem;
+  }
+  @include mq.responsive('xxs')
+  {
+    flex-direction: column-reverse;
+    row-gap: 4rem;
+  }
+
+  &_caption{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.3;
+    position: relative;
+    pointer-events: none;
+
+    @include mq.responsive('xl')
+    {
+      font-size: 1.8rem;
+    }
+    @include mq.responsive('lg')
+    {
+      font-size: 1.8rem;
+    }
+    @include mq.responsive('md')
+    {
+      font-size: 3rem;
+    }
+    @include mq.responsive('sm')
+    {
+      font-size: 2.3rem;
+    }
+    @include mq.responsive('xs')
+    {
+      font-size: 2rem;
+    }
+    @include mq.responsive('xxs')
+    {
+      font-size: 1.5rem;
+    }
+
+    &_career{
+      position: relative;
+
+      &_decoration1{
+        position: absolute;
+        width: 100px;
+        aspect-ratio: 368/338;
+        bottom: -30px;
+        right: -55px;
+
+        @include mq.responsive('xl')
+        {
+          width: 70px;
+          bottom: -20px;
+          right: -30px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 70px;
+          bottom: -20px;
+          right: -30px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 100px;
+          bottom: -30px;
+          right: -55px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 70px;
+          bottom: -20px;
+          right: -30px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 70px;
+          bottom: -20px;
+          right: -30px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 55px;
+        }
+      }
+    }
+
+    &_decoration2{
+      position: absolute;
+      width: 150px;
+      aspect-ratio: 368/276;
+      top: -40px;
+      left: -60px;
+
+      @include mq.responsive('xl')
+      {
+        width: 100px;
+        top: -25px;
+        left: -45px;
+      }
+      @include mq.responsive('lg')
+      {
+        width: 100px;
+        top: -25px;
+        left: -45px;
+      }
+      @include mq.responsive('md')
+      {
+        width: 150px;
+        top: -40px;
+        left: -60px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 100px;
+        top: -25px;
+        left: -45px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 100px;
+        top: -25px;
+        left: -45px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 80px;
+        top: -19px;
+        left: -38px;
+      }
+    }
+  }
+
+  &_image_desc{
+    display: flex;
+    column-gap: 5rem;
+    align-items: center;
+    position: relative;
+
+    &_image{
+      width: 368px;
+      aspect-ratio: 368/384;
+
+      @include mq.responsive('xl')
+      {
+        width: 270px;
+      }
+      @include mq.responsive('lg')
+      {
+        width: 270px;
+      }
+      @include mq.responsive('md')
+      {
+        width: 368px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 250px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 235px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 180px;
+      }
+    }
+  
+    &_vertical_caption{
+      height: 25rem;
+      writing-mode: vertical-rl;
+      font-size: 3rem;
+      font-weight: bold;
+      color: rgb(87, 98, 253);
+      text-transform: uppercase;
+      margin-left: -8rem;
+      pointer-events: none;
+
+      @include mq.responsive('xl')
+      {
+        font-size: 1.8rem;
+        height: 18rem;
+        margin-left: -5.5rem;
+      }
+      @include mq.responsive('lg')
+      {
+        font-size: 1.5rem;
+        height: 15rem;
+        margin-left: -5.5rem;
+      }
+      @include mq.responsive('md')
+      {
+        font-size: 3rem;
+        height: 25rem;
+        margin-left: -8rem;
+      }
+      @include mq.responsive('sm')
+      {
+        font-size: 1.8rem;
+        height: 15rem;
+        margin-left: -6rem;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 1.5rem;
+        height: 15rem;
+        margin-left: -5rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        font-size: 1.2rem;
+        height: 12rem;
+        margin-left: -5.2rem;
+      }
+    }
+
+    &_decoration{
+      position: absolute;
+      width: 100px;
+      aspect-ratio: 368/276;
+      top: -30px;
+      left: 60px;
+
+      @include mq.responsive('xl')
+      {
+        width: 50px;
+        top: -20px;
+        left: 60px;
+      }
+      @include mq.responsive('lg')
+      {
+        width: 50px;
+        top: -20px;
+        left: 60px;
+      }
+      @include mq.responsive('md')
+      {
+        width: 100px;
+        top: -30px;
+        left: 60px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 65px;
+        top: -30px;
+        left: 45px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 50px;
+        top: -20px;
+        left: 45px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 40px;
+        top: -18px;
+        left: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.news_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 6rem;
+
+  @include mq.responsive('lg')
+  {
+    padding: 4rem;
+  }
+  @include mq.responsive('md')
+  {
+    padding: 4rem;
+  }
+  @include mq.responsive('sm')
+  {
+    padding: 4rem;
+  }
+  @include mq.responsive('xs')
+  {
+    padding: 3rem;
+  }
+  @include mq.responsive('xxs')
+  {
+    padding: 3rem;
+  }
+
+  .news_section_desc :not(.news_section_desc_get){
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+
+    @include mq.responsive('xl')
+    {
+      font-size: 4.5rem;
+      letter-spacing: 4px;
+    }
+    @include mq.responsive('lg')
+    {
+      font-size: 3.5rem;
+      letter-spacing: 4px;
+    }
+    @include mq.responsive('md')
+    {
+      font-size: 3.5rem;
+      letter-spacing: 4px;
+    }
+    @include mq.responsive('sm')
+    {
+      font-size: 3rem;
+      letter-spacing: 4px;
+    }
+    @include mq.responsive('xs')
+    {
+      font-size: 2.5rem;
+      letter-spacing: 4px;
+    }
+    @include mq.responsive('xxs')
+    {
+      font-size: 2rem;
+      letter-spacing: 4px;
+    }
+  }
+
+  &_desc{
+    line-height: 0.7;
+
+    @include mq.responsive('xl')
+    {
+      line-height: 0.7;
+    }
+    @include mq.responsive('lg')
+    {
+      line-height: 0.9;
+    }
+    @include mq.responsive('md')
+    {
+      line-height: 0.9;
+    }
+    @include mq.responsive('sm')
+    {
+      line-height: 0.95;
+    }
+    @include mq.responsive('xs')
+    {
+      line-height: 1;
+    }
+    @include mq.responsive('xxs')
+    {
+      line-height: 0.95;
+    }
+
+    p{
+      pointer-events: none;
+    }
+
+    &_get{
+      font-size: 13rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include mq.responsive('xl')
+      {
+        font-size: 10rem;
+      }
+      @include mq.responsive('lg')
+      {
+        font-size: 6rem;
+      }
+      @include mq.responsive('md')
+      {
+        font-size: 6rem;
+      }
+      @include mq.responsive('sm')
+      {
+        font-size: 6rem;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 4rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        font-size: 3rem;
+      }
+    }
+
+    &_inspired{
+      color: rgb(87, 98, 253);
+    }
+
+    &_latest{
+      font-style: italic;
+      color: rgb(87, 98, 253);
+      background-color: black;
+    }
+
+    &_updates{
+      color: rgb(87, 98, 253);
+    }
+  }
+
+  &_link{
+    text-decoration: none;
+    border-radius: 50%;
+
+      &_icon{
+        font-size: 10rem;
+        transition: transform 0.4s; //transform added in jsx
+
+        @include mq.responsive('lg')
+        {
+          font-size: 8.5rem;
+        }
+        @include mq.responsive('lg')
+        {
+          font-size: 7rem;
+        }
+        @include mq.responsive('md')
+        {
+          font-size: 7rem;
+        }
+        @include mq.responsive('sm')
+        {
+          font-size: 5.5rem;
+        }
+        @include mq.responsive('xs')
+        {
+          font-size: 4.5rem;
+        }
+        @include mq.responsive('xxs')
+        {
+          font-size: 3rem;
+        }
+      }
+  }
+}

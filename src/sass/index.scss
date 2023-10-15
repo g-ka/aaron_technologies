@@ -1,0 +1,28 @@
+@use "./01_abstract/variables";
+
+@use "./02_base/generic";
+
+@use "./03_components/Header";
+
+@use "./03_components/home/hero_section";
+@use "./03_components/home/highlights_section";
+@use "./03_components/home/course_section";
+@use "./03_components/home/news_section";
+@use "./03_components/home/mission_section";
+@use "./03_components/home/scroll_top";
+
+@use "./03_components/courses&career/course_intro";
+@use "./03_components/courses&career/courses_list";
+@use "./03_components/courses&career/career_intro";
+@use "./03_components/courses&career/career_list";
+
+@use "./03_components/articles/articles_intro";
+@use "./03_components/articles/feeds_section";
+
+@use "./03_components/about/about_intro";
+@use "./03_components/about/about_end";
+
+@use "./03_components/contact/contact_form";
+@use "./03_components/contact/contact_end";
+
+@use "./03_components/Footer";

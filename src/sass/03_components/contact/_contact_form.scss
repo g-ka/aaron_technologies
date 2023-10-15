@@ -1,0 +1,158 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.contact_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 6rem;
+
+  @include mq.responsive('lg')
+  {
+    padding: 3.5rem 4rem;
+  }
+  @include mq.responsive('md')
+  {
+    padding: 3.5rem;
+  }
+  @include mq.responsive('sm')
+  {
+    padding: 3rem;
+  }
+  @include mq.responsive('xs')
+  {
+    padding: 3rem 2rem;
+  }
+  @include mq.responsive('xxs')
+  {
+    padding: 3rem 1.5rem;
+  }
+
+  &__card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5rem;
+    background-color: white;
+    width: 100%;
+    padding: 2rem 3rem;
+    border: none;
+    border-radius: 1rem;
+    border: 2px solid black;
+
+    @include mq.responsive('lg')
+    {
+      padding: 2rem 3rem;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+    @include mq.responsive('md')
+    {
+      padding: 2rem;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+    @include mq.responsive('sm')
+    {
+      padding: 2rem 1.5rem;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+    @include mq.responsive('xxs')
+    {
+      padding: 2rem 1rem;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+
+    &__desc{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1.4rem;
+      width: 100%;
+
+      h3{
+        text-align: center;
+        pointer-events: none;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+
+        
+        @include mq.responsive('xxs')
+        {
+          font-size: 1.1rem;
+        }
+      }
+
+      p{
+        text-align: center;
+        pointer-events: none;
+      }
+
+      input:focus{
+        border: 0.094rem solid rgb(87, 98, 253);
+      }
+
+      .common,.message{
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: rgb(246, 246, 246);
+        outline: none;
+        font-size: 1rem;
+        font-family: 'Kumbh Sans', sans-serif;
+      }
+
+      .message{
+        resize: none;
+      }
+      .message:focus{
+        border: 0.094rem solid rgb(87, 98, 253);
+      }
+    }
+
+    &__img{
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+
+      img{
+        aspect-ratio: 368/444;
+        width: 250px;
+
+        @include mq.responsive('sm')
+        {
+          width: 240px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 225px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 210px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 200px;
+        }
+      }
+
+      button{
+        padding: 0.5rem 1.3rem;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        color: white;
+        background-color: rgb(87, 98, 253);
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: 'Kumbh Sans', sans-serif;
+        transition: background-color 0.2s;
+      }
+    }
+  }
+}

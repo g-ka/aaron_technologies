@@ -1,0 +1,633 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.highlights_section{
+  display: grid;
+  grid-template-areas: 'years_15 years_15 doubt_resolution doubt_resolution doubt_resolution low_price low_price'
+                       'years_15 years_15 doubt_resolution doubt_resolution doubt_resolution low_price low_price'
+                       'years_15 years_15 depth_learning depth_learning great_bond low_price low_price'
+                       'certification certification depth_learning depth_learning great_bond career_path career_path'
+                       'certification certification love_learning love_learning love_learning love_learning love_learning'
+                       'certification certification love_learning love_learning love_learning love_learning love_learning';
+  padding: 8rem 6rem;
+  gap: 0.25rem;
+
+  @include mq.responsive('lg')
+  {
+    grid-template-areas: 'years_15'
+                         'low_price'
+                         'great_bond'
+                         'depth_learning'
+                         'love_learning'
+                         'doubt_resolution'
+                         'career_path'
+                         'certification';
+    gap: 2rem;
+    padding: 6rem 4rem;
+  }
+  @include mq.responsive('md')
+  {
+    grid-template-areas: 'years_15'
+                         'low_price'
+                         'great_bond'
+                         'depth_learning'
+                         'love_learning'
+                         'doubt_resolution'
+                         'career_path'
+                         'certification';
+    gap: 2rem;
+    padding: 6.5rem 3.2rem;
+  }
+  @include mq.responsive('sm')
+  {
+    grid-template-areas: 'years_15'
+                         'low_price'
+                         'great_bond'
+                         'depth_learning'
+                         'love_learning'
+                         'doubt_resolution'
+                         'career_path'
+                         'certification';
+    gap: 2rem;
+    padding: 6.5rem 2.5rem;
+  }
+  @include mq.responsive('xs')
+  {
+    grid-template-areas: 'years_15'
+                         'low_price'
+                         'great_bond'
+                         'depth_learning'
+                         'love_learning'
+                         'doubt_resolution'
+                         'career_path'
+                         'certification';
+    gap: 2rem;
+    padding: 5rem 2.5rem;
+  }
+  @include mq.responsive('xxs')
+  {
+    grid-template-areas: 'years_15'
+                         'low_price'
+                         'great_bond'
+                         'depth_learning'
+                         'love_learning'
+                         'doubt_resolution'
+                         'career_path'
+                         'certification';
+    gap: 2rem;
+    padding: 4rem 1.5rem;
+  }
+
+  div{
+    border-radius: 10px;
+    padding: 3rem 2rem;
+
+    @include mq.responsive('lg')
+    {
+      padding: 2rem 2.5rem;
+    }
+    @include mq.responsive('sm')
+    {
+      padding: 2rem 1.5rem;
+    }
+    @include mq.responsive('xs')
+    {
+      padding: 1.3rem;
+    }
+    @include mq.responsive('xxs')
+    {
+      padding: 1rem;
+    }
+
+    p{
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      line-height: 1.1;
+      text-align: center;
+      color: white;
+      text-align: center;
+      pointer-events: none;
+
+      @include mq.responsive('xl')
+      {
+        font-size: 1.4rem;
+      }
+      @include mq.responsive('lg')
+      {
+        line-height: normal;
+      }
+      @include mq.responsive('md')
+      {
+        line-height: normal;
+      }
+      @include mq.responsive('sm')
+      {
+        font-size: 1.5rem;
+        line-height: normal;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 1.2rem;
+        line-height: normal;
+      }
+      @include mq.responsive('xxs')
+      {
+        font-size: 1rem;
+        line-height: normal;
+      }
+    }
+  }                  
+  .years_15{
+    grid-area: years_15;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: relative;
+
+    @include mq.responsive('lg')
+    {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include mq.responsive('md')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xxs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 170px;
+      aspect-ratio: 368/391;
+
+      @include mq.responsive('xl')
+      {
+        width: 140px;
+      }
+      @include mq.responsive('lg')
+      {
+        width: 140px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 140px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 120px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 100px;
+      }
+    }
+    .bookmark_image{
+      position: absolute;
+      top: -40px;
+      left: -10px;
+      aspect-ratio: 368/350;
+      width: 100px;
+      transform: rotate(10deg);
+
+      @include mq.responsive('sm')
+      {
+        width: 90px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 80px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 70px;
+      }
+    }
+  }
+  .great_bond{
+    grid-area: great_bond;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+    @include mq.responsive('lg')
+    {
+      flex-direction: row;
+      column-gap: 2rem;
+      justify-content: space-around;
+    }
+    @include mq.responsive('md')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xxs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 100px;
+      aspect-ratio: 368/426;
+
+      @include mq.responsive('xl')
+      {
+        width: 95px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 110px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 95px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 90px;
+      }
+    }
+  }
+  .low_price{
+    grid-area: low_price;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    row-gap: 1rem;
+
+    @include mq.responsive('lg')
+    {
+      flex-direction: row;
+      column-gap: 3rem;
+      justify-content: space-around;
+    }
+    @include mq.responsive('md')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 130px;
+      aspect-ratio: 368/369;
+
+      @include mq.responsive('xl')
+      {
+        width: 115px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 115px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 105px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 90px;
+      }
+    }
+  }
+  .depth_learning{
+    grid-area: depth_learning;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+    @include mq.responsive('lg')
+    {
+      flex-direction: row;
+      column-gap: 2rem;
+      justify-content: space-around;
+    }
+    @include mq.responsive('md')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xxs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 140px;
+      aspect-ratio: 368/438;
+
+      @include mq.responsive('xl')
+      {
+        width: 110px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 115px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 100px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 90px;
+      }
+    }
+  }
+  .love_learning{
+    grid-area: love_learning;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+    @include mq.responsive('lg')
+    {
+      justify-content: space-around;
+      column-gap: 3rem;
+    }
+    @include mq.responsive('md')
+    {
+      flex-direction: column;
+      row-gap: 2rem;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      flex-direction: column;
+      row-gap: 2rem;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xs')
+    {
+      flex-direction: column;
+      row-gap: 1rem;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xxs')
+    {
+      flex-direction: column;
+      row-gap: 1rem;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 170px;
+      aspect-ratio: 368/368;
+
+      @include mq.responsive('xl')
+      {
+        width: 120px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 130px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 120px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 100px;
+      }
+    }
+  }
+  .doubt_resolution{
+    grid-area: doubt_resolution;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    column-gap: 4rem;
+
+    @include mq.responsive('lg')
+    {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include mq.responsive('md')
+    {
+      flex-direction: column;
+      row-gap: 2rem;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      flex-direction: column;
+      row-gap: 2rem;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xs')
+    {
+      flex-direction: column;
+      row-gap: 1rem;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xxs')
+    {
+      flex-direction: column;
+      row-gap: 1rem;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 100px;
+      aspect-ratio: 368/783;
+
+      @include mq.responsive('xl')
+      {
+        width: 90px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 90px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 80px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 70px;
+      }
+    }
+  }
+  .certification{
+    grid-area: certification;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+    @include mq.responsive('lg')
+    {
+      flex-direction: row;
+      column-gap: 2rem;
+      justify-content: space-around;
+    }
+    @include mq.responsive('md')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('xxs')
+    {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 200px;
+      aspect-ratio: 368/642;
+
+      @include mq.responsive('xl')
+      {
+        width: 170px;
+      }
+      @include mq.responsive('lg')
+      {
+        width: 110px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 150px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 120px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 100px;
+      }
+    }
+  }
+  .career_path{
+    grid-area: career_path;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    row-gap: 1rem;
+
+    @include mq.responsive('lg')
+    {
+      flex-direction: row;
+      column-gap: 4rem;
+      justify-content: space-around;
+    }
+    @include mq.responsive('md')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include mq.responsive('sm')
+    {
+      row-gap: 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img{
+      width: 110px;
+      aspect-ratio: 368/413;
+
+      @include mq.responsive('xl')
+      {
+        width: 90px;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 100px;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 90px;
+      }
+      @include mq.responsive('xxs')
+      {
+        width: 80px;
+      }
+    }
+  }
+}

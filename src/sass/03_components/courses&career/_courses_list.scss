@@ -1,0 +1,478 @@
+@use "../../01_abstract/media_queries" as mq;
+
+.courses{
+
+  &_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 6rem 4rem 6rem;
+  
+    @include mq.responsive('xl')
+    {
+      padding: 3rem 4rem 4rem 4rem;
+      gap: 2rem;
+    }
+    @include mq.responsive('lg')
+    {
+      grid-template-columns: 1fr 1fr;
+      padding: 3rem 3rem 4rem 3rem;
+      gap: 2.5rem;
+    }
+    @include mq.responsive('md')
+    {
+      grid-template-columns: 1fr 1fr;
+      padding: 3rem 2.5rem 4rem 2.5rem;
+      gap: 2.5rem;
+    }
+    @include mq.responsive('sm')
+    {
+      grid-template-columns: 1fr;
+      padding: 3rem 3rem 4rem 3rem;
+      gap: 2.5rem;
+    }
+    @include mq.responsive('xs')
+    {
+      grid-template-columns: 1fr;
+      padding: 3rem 3.2rem;
+      gap: 2.5rem;
+    }
+    @include mq.responsive('xxs')
+    {
+      grid-template-columns: 1fr;
+      padding: 3rem 1.5rem;
+      gap: 2.5rem;
+    }
+  
+    &_course{
+      display: flex;
+      flex-direction: column;
+      background-image: linear-gradient(to bottom, black , rgb(51, 56, 151));
+      padding: 3rem 2rem;
+      align-items: center;
+      border-radius: 20px;
+      justify-content: space-between;
+      height: 33rem;
+  
+      @include mq.responsive('xl')
+      {
+        padding: 2rem 1rem;
+        height: 28.5rem;
+      }
+      @include mq.responsive('lg')
+      {
+        padding: 2rem 1rem;
+        height: 27rem;
+      }
+      @include mq.responsive('md')
+      {
+        padding: 2rem 1rem;
+        height: 24rem;
+      }
+      @include mq.responsive('sm')
+      {
+        padding: 2rem 2rem;
+        height: 34rem;
+      }
+      @include mq.responsive('xs')
+      {
+        padding: 2rem 1rem;
+        height: 27rem;
+      }
+      @include mq.responsive('xxs')
+      {
+        padding: 2rem 1rem;
+        height: 24rem;
+      }
+  
+      &_image1{
+        aspect-ratio: 368/334;
+        width: 190px;
+  
+        @include mq.responsive('xl')
+        {
+          width: 160px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 160px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 130px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 230px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 160px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 130px;
+        }
+      }
+      &_image2{
+        aspect-ratio: 1/1;
+        width: 220px;
+  
+        @include mq.responsive('xl')
+        {
+          width: 190px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 190px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 160px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 260px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 190px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 160px;
+        }
+      }
+      &_image3{
+        aspect-ratio: 368/592;
+        width: 150px;
+  
+        @include mq.responsive('xl')
+        {
+          width: 130px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 130px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 100px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 170px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 130px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 100px;
+        }
+      }
+      &_image4{
+        aspect-ratio: 368/311;
+        width: 220px;
+  
+        @include mq.responsive('xl')
+        {
+          width: 200px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 200px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 170px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 260px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 200px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 170px;
+        }
+      }
+      &_image5{
+        aspect-ratio: 368/307;
+        width: 240px;
+  
+        @include mq.responsive('xl')
+        {
+          width: 200px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 200px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 170px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 280px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 200px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 170px;
+        }
+      }
+      &_image6{
+        aspect-ratio: 368/390;
+        width: 200px;
+  
+        @include mq.responsive('xl')
+        {
+          width: 180px;
+        }
+        @include mq.responsive('lg')
+        {
+          width: 180px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 150px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 220px;
+        }
+        @include mq.responsive('xs')
+        {
+          width: 180px;
+        }
+        @include mq.responsive('xxs')
+        {
+          width: 150px;
+        }
+      }
+  
+      &_heading{
+        color: white;
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        pointer-events: none;
+  
+        @include mq.responsive('xl')
+        {
+          font-size: 1.7rem;
+        }
+        @include mq.responsive('lg')
+        {
+          font-size: 1.6rem;
+        }
+        @include mq.responsive('md')
+        {
+          font-size: 1.4rem;
+        }
+        @include mq.responsive('sm')
+        {
+          font-size: 2rem;
+        }
+        @include mq.responsive('xs')
+        {
+          font-size: 1.6rem;
+        }
+        @include mq.responsive('xxs')
+        {
+          font-size: 1.4rem;
+        }
+      }
+  
+      &_list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.2rem;
+        list-style-type: none;
+  
+        @include mq.responsive('xl')
+        {
+          row-gap: 1.1rem; 
+        }
+        @include mq.responsive('lg')
+        {
+          row-gap: 1rem; 
+        }
+        @include mq.responsive('md')
+        {
+          row-gap: 1rem; 
+        }
+        @include mq.responsive('xs')
+        {
+          row-gap: 1rem; 
+        }
+        @include mq.responsive('xxs')
+        {
+          row-gap: 1rem; 
+        }
+  
+        li:not(.courses_grid_course_list_special_item)
+        {
+          pointer-events: none;
+        }
+        li{
+          font-size: 1.4rem;
+          color: white;
+          text-align: center;
+          text-transform: capitalize;
+  
+          @include mq.responsive('xl')
+          {
+            font-size: 1.25rem;
+          }
+          @include mq.responsive('lg')
+          {
+            font-size: 1.1rem;
+          }
+          @include mq.responsive('md')
+          {
+            font-size: 1rem;
+          }
+          @include mq.responsive('xs')
+          {
+            font-size: 1.1rem;
+          }
+          @include mq.responsive('xxs')
+          {
+            font-size: 1rem;
+          }
+        }
+  
+        &_special_item{
+          animation: link 1s infinite;
+          cursor: pointer;
+        }
+        @keyframes link {
+          0% {letter-spacing: normal;}
+          50% {letter-spacing: 0.5px;}
+          100% {letter-spacing: normal;}
+        }
+      }
+  
+      &_buttons{
+        display: flex;
+        column-gap: 1.5rem;
+  
+        &_1, &_2{
+          font-size: 1.3rem;
+          padding: 0.7rem 1.5rem;
+          background-color: white;
+          font-weight: 700;
+          border: 0;
+          text-transform: uppercase;
+          cursor: pointer;
+          border-radius: 50px;
+          transition: background-color 0.2s, color 0.2s;
+  
+          @include mq.responsive('xl')
+          {
+            font-size: 1.2rem;
+            padding: 0.7rem 1.4rem;
+          }
+          @include mq.responsive('lg')
+          {
+            font-size: 1.1rem;
+            padding: 0.7rem 1.3rem;
+          }
+          @include mq.responsive('md')
+          {
+            font-size: 1rem;
+            padding: 0.7rem 1.2rem;
+          }
+          @include mq.responsive('sm')
+          {
+            font-size: 1.4rem;
+            padding: 0.6rem 1.5rem;
+          }
+          @include mq.responsive('xs')
+          {
+            font-size: 1.1rem;
+            padding: 0.7rem 1.3rem;
+          }
+          @include mq.responsive('xxs')
+          {
+            font-size: 1rem;
+            padding: 0.7rem 1.2rem;
+          }
+        }
+        &_1:hover,&_2:hover{
+          color: white;
+          background-color: black;        
+        }
+      }
+    }
+  }
+  
+  .flip-vertical-left{
+    -webkit-animation: flip-vertical-left 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: flip-vertical-left 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  }
+  .flip-vertical-right{
+    -webkit-animation: flip-vertical-right 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: flip-vertical-right 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  }
+  
+  /* ----------------------------------------------
+   * Generated by Animista on 2023-10-10 11:47:19
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+  
+  @-webkit-keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-360deg);
+              transform: rotateY(-360deg);
+    }
+  }
+  @keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-360deg);
+              transform: rotateY(-360deg);
+    }
+  }
+  
+  @-webkit-keyframes flip-vertical-right {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @keyframes flip-vertical-right {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+}

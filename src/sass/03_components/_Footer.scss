@@ -1,0 +1,123 @@
+@use "../01_abstract/media_queries" as mq;
+
+.footer{
+  padding: 2rem 6rem 0 6rem;
+
+  @include mq.responsive('md')
+  {
+    padding: 2rem 3rem;    
+  }
+  @include mq.responsive('sm')
+  {
+    padding: 2rem;    
+  }
+
+  &_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+
+    @include mq.responsive('lg')
+    {
+      padding: 3rem 1rem;
+    }
+    @include mq.responsive('sm')
+    {
+      flex-direction: column;
+      row-gap: 3rem;
+      padding: 2rem;
+    }
+
+    &_handles, &_nav{
+      display: flex;
+      flex-direction: column;
+
+      p{
+        font-size: 0.9rem;
+        pointer-events: none;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        color: gray;
+
+        @include mq.responsive('md')
+        {
+          margin-bottom: 0.8rem;
+        }
+        @include mq.responsive('sm')
+        {
+          text-align: center;
+          margin-bottom: 0.5rem;
+        }
+      }
+      
+      a{
+        text-decoration: none;
+        color: black;
+        display: inline;
+        text-transform: capitalize;
+        transition: color 0.2s;
+
+        @include mq.responsive('md')
+        {
+          font-size: 0.9rem;
+        }
+        @include mq.responsive('sm')
+        {
+          text-align: center;
+        }
+      }
+      a:hover{
+        color: rgb(87, 98, 253);
+      }
+    }
+
+    &_logo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+
+      img{
+        aspect-ratio: 260/141;
+        width: 200px;
+        border-radius: 20px;
+
+        @include mq.responsive('lg')
+        {
+          width: 170px;
+          border-radius: 20px;
+        }
+        @include mq.responsive('md')
+        {
+          width: 150px;
+          border-radius: 20px;
+        }
+        @include mq.responsive('sm')
+        {
+          width: 200px;
+          border-radius: 20px;
+        }
+      }
+
+      p{
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        pointer-events: none;
+
+        @include mq.responsive('md')
+        {
+          font-size: 0.7rem;
+        }
+        @include mq.responsive('sm')
+        {
+          text-align: center;
+        }
+
+        span{
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
