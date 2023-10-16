@@ -34,7 +34,7 @@ const CoursesList = () => {
                         'Call Center Training',
                         'Hardware & Networking',
                         'UI/UX - web designing',
-                        'fornt-end web development',
+                        'front-end web development',
                         'fullstack web development'
                       ];
   const texts = [text1, text2, text3, text4, text5, text6];
