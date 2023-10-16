@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import mark_animation from '../../images/home/courses_section/mark_animation.gif';
 
 const CourseSection = () => {
 
@@ -11,7 +12,7 @@ const CourseSection = () => {
       <div className='course_section_image_desc'>
         <p className='course_section_image_desc_desc'>
           <span className='course_section_image_desc_desc_exploring'>Exploring
-            <img src='./images/home/courses_section/mark_animation.gif' className='course_section_image_desc_desc_exploring_mark'/>
+            <img src={mark_animation} className='course_section_image_desc_desc_exploring_mark'/>
           </span> the Spectrum of Technological Evolution From <span className='course_section_image_desc_desc_foundational'>Foundational Fundamentals</span> to the Pinnacle of Progress    
         </p>
       </div>

@@ -1,11 +1,12 @@
 import React from 'react';
+import location from '../../images/contact/location.png';
 
 const ContactEnd = () => {
   return (
     <section className='contact_end'>
       <div className='contact_end_address'>
         <span>Aaron
-          <img src='./images/contact/location.png' />  
+          <img src={location} />  
         </span> Technologies
         36, Mariamman Koil Street,
         Hasthampatty,

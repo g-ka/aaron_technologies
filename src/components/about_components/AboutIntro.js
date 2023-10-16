@@ -1,4 +1,6 @@
 import React from 'react';
+import tech_meditation from '../../images/about/tech_meditation.png';
+import scribble from '../../images/about/scribble.gif';
 
 const AboutIntro = () => {
   return (
@@ -9,13 +11,13 @@ const AboutIntro = () => {
         </p>
         <img 
           className='about_intro_image_hash_image' 
-          src='./images/about/tech_meditation.png'
+          src={tech_meditation}
         />
       </div>
       <p className='about_intro_content'>
       Unlock your potential with Aaron Tech's 'it', AI and web dev training. Be industry-<span className='about_intro_content_img'>ready
         <img 
-          src='./images/about/scribble.gif' 
+          src={scribble}
           className='about_intro_content_img_scribble' 
         /> 
       </span> 

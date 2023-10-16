@@ -1,5 +1,11 @@
 import React , { useState } from 'react';
 import ViewList from './ViewList';
+import persona_communication from '../../images/courses/persona_communication.png';
+import callcenter_training from '../../images/courses/callcenter_training.png';
+import hardware_networking from '../../images/courses/hardware_networking.png';
+import ui_ux from '../../images/courses/ui_ux.png';
+import frontend from '../../images/courses/frontend.png';
+import backend from '../../images/courses/backend.png';
 
 const CoursesList = () => {
 
@@ -17,12 +23,12 @@ const CoursesList = () => {
   const [ course6 , set_course6 ] = useState('courses_grid_course'); 
 
   const no_of_courses = [1,2,3,4,5,6];
-  const course_image = ['persona_communication.png',
-                        'callcenter_training.png',
-                        'hardware_networking.png',
-                        'ui_ux.png',
-                        'frontend.png',
-                        'backend.png'
+  const course_image = [persona_communication,
+                        callcenter_training,
+                        hardware_networking,
+                        ui_ux,
+                        frontend,
+                        backend
                       ];
   const course_names = ['communication & personality development',
                         'Call Center Training',
@@ -191,8 +197,8 @@ const CoursesList = () => {
           (
             <div className={courses[number-1]} key={number}>
               {texts[number-1] === 'view' ? 
-                <>
-                  <img src={`./images/courses/${course_image[number-1]}`} className={`courses_grid_course_image${number}`} />
+                <>                  
+                  <img src={course_image[number-1]} className={`courses_grid_course_image${number}`} />
                   <p className='courses_grid_course_heading'>
                     {`${course_names[number-1]}`}
                   </p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import aarontech_logo from '../images/footer/aarontech_logo.gif';
 
 const Footer = () => {
 
@@ -26,7 +27,7 @@ const Footer = () => {
           <Link to='/contact' className='footer_box_nav_contact' onClick={() => window.scrollBy(0,-window.pageYOffset)}>contact</Link>
         </div>
         <div className='footer_box_logo'>
-          <img src='./images/footer/aarontech_logo.gif' />
+          <img src={aarontech_logo} />
           <p><span>&copy;</span> aaron tech co {date.getFullYear()}</p>
           <p>Illustration by Icons8 from Ouch!</p>
         </div>

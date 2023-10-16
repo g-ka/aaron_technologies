@@ -1,5 +1,6 @@
 import React, { useState , useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import contact_form from '../../images/contact/contact_form.png';
 
 const ContactForm = () => {
 
@@ -47,7 +48,7 @@ const ContactForm = () => {
             <textarea name="message" className="message" placeholder="Share your message here" rows="8" required />
           </div>
           <div className="contact_section__card__img">
-            <img src="./images/contact/contact_form.png" alt="kapfrost_contact_us" />
+            <img src={contact_form} alt="kapfrost_contact_us" />
             <button 
               type='submit' 
               style={send_style} 
