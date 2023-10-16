@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/aaron_technologies/static/css/main.c3daa103.css",
-    "main.js": "/aaron_technologies/static/js/main.a2a08660.js",
+    "main.js": "/aaron_technologies/static/js/main.39337d82.js",
+    "static/media/scribble_animation.gif": "/aaron_technologies/static/media/scribble_animation.2a25aa558c758459ea33.gif",
     "index.html": "/aaron_technologies/index.html",
     "main.c3daa103.css.map": "/aaron_technologies/static/css/main.c3daa103.css.map",
-    "main.a2a08660.js.map": "/aaron_technologies/static/js/main.a2a08660.js.map"
+    "main.39337d82.js.map": "/aaron_technologies/static/js/main.39337d82.js.map"
   },
   "entrypoints": [
     "static/css/main.c3daa103.css",
-    "static/js/main.a2a08660.js"
+    "static/js/main.39337d82.js"
   ]
 }
