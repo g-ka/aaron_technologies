@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import scribble_animation from '../../images/home/hero_image/scribble_animation.gif';
 
 const HeroSection = () => {
   return (
@@ -6,7 +7,8 @@ const HeroSection = () => {
       <p className='hero_section_caption'>
         Transform Your Technological Passion into a Lucrative <span className='hero_section_caption_career'>
           Career
-          <img src='./images/home/hero_image/scribble_animation.gif' className='hero_section_caption_career_decoration1' alt='underline_highlight' />
+          {/* <img src='./images/home/hero_image/scribble_animation.gif' className='hero_section_caption_career_decoration1' alt='underline_highlight' /> */}
+          <img src={scribble_animation} className='hero_section_caption_career_decoration1' alt='underline_highlight' />
         </span> Path        
         <img src='./images/home/hero_image/mark.png' className='hero_section_caption_decoration2' alt='scribble_highlight'/>
       </p>
