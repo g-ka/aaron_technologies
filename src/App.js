@@ -15,6 +15,8 @@ function App() {
 
       <Routes>
 
+        <Route index element={<Home />} />
+
         <Route path="/" element={<Home />} />
 
         <Route path="/courses&career" element={<Courses />} />
@@ -24,6 +26,8 @@ function App() {
         <Route path="/articles" element={<Articles />} />
 
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
 
       </Routes>
 
