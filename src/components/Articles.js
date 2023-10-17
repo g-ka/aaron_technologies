@@ -5,7 +5,7 @@ import ScrollTop from './ScrollTop';
 
 const Articles = () => {
 
-  const URL = 'https://newsdata.io/api/1/news?apikey=pub_308388f4d15b898eab080ff13c433ade26ff1&q=tech%20AND%20(google%20OR%20facebook%20OR%20apple%20OR%20meta%20OR%20elon%20musk%20OR%20ai%20OR%20software%20OR%20hardware%20OR%20open%20ai%20OR%20microsoft%20OR%20computer%20OR%20X%20OR%20nvidia%20OR%20digital%20OR%20hcl%20OR%20virtual%20OR%20cyber%20OR%20transistor%20OR%20web%20OR%20intel)&language=en';
+  const URL = 'https://newsdata.io/api/1/news?apikey=pub_308388f4d15b898eab080ff13c433ade26ff1&q=tech%20AND%20(google%20OR%20facebook%20OR%20apple%20OR%20meta%20OR%20elon%20musk%20OR%20ai%20OR%20software%20OR%20hardware%20OR%20open%20ai%20OR%20microsoft%20OR%20computer%20OR%20X%20OR%20nvidia%20OR%20digital%20OR%20hcl%20OR%20virtual%20OR%20cyber%20OR%20transistor%20OR%20web%20OR%20intel%20OR%20android%20OR%20whatsapp%20OR%20baidu%20OR%20ernie%20OR%20ceo)&language=en';
 
   const [ data , set_data ] = useState(() => {});
   const [ titles , set_titles ] = useState(() => []);
