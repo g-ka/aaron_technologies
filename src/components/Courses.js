@@ -12,6 +12,7 @@ const Courses = () => {
   return (
     <main className='courses' 
           onWheel={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}
+          onTouchMove={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}
     >     
       <CoureseIntro /> 
       <CoursesList />

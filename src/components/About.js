@@ -8,7 +8,10 @@ const About = () => {
   const [ check , set_check ] = useState(false);
 
   return (
-    <main onWheel={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}>
+    <main 
+      onWheel={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}
+      onTouchMove={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}
+    >
       <AboutIntro />
       <AboutEnd />
       {check && <ScrollTop 

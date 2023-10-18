@@ -49,7 +49,11 @@ const Articles = () => {
   }, [ next_page ]);
 
   return (
-    <main className='articles' onWheel={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}>
+    <main 
+      className='articles' 
+      onWheel={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}
+      onTouchMove={() => window.pageYOffset>500 ? set_check(true) : set_check(false)}
+    >
       <ArticlesIntro />
       <Feeds 
         titles={titles}
